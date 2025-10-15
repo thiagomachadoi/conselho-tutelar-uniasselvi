@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-08-28T23:25:27.296997" rpa="false" schemaversion="5">
+<suite id="s1" name="Gasto" source="/home/thiago/www/olha-tudo/tests/Functional/resources/specs/Gasto.robot">
+<test id="s1-t1" name="Deve cadastrar gasto" line="10">
+<kw name="Iniciar navegador" owner="Functional" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-08-28T23:25:27.665732" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/thiago/www/olha-tudo/browser/traces/temp/cbb40fca-86ff-4ef6-b958-66f2f2d99f78"}</msg>
+<msg time="2025-08-28T23:25:27.685408" level="INFO">Starting Browser process /home/thiago/www/venv/lib/python3.10/site-packages/Browser/wrapper/index.js using at 127.0.0.1:33791</msg>
+<msg time="2025-08-28T23:25:29.613273" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/home/thiago/www/olha-tudo/browser/traces/temp/cbb40fca-86ff-4ef6-b958-66f2f2d99f78"}</msg>
+<arg>chromium</arg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-08-28T23:25:27.663450" elapsed="1.951034"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-08-28T23:25:29.620337" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-08-28T23:25:29.783920" level="INFO">Successfully created context. </msg>
+<msg time="2025-08-28T23:25:29.784482" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-08-28T23:25:29.615672" elapsed="0.169237"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-08-28T23:25:30.449251" level="INFO">Successfully initialized new page object and opened url: http://localhost:8000/controle-gastos</msg>
+<arg>${LINK}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-08-28T23:25:29.785489" elapsed="0.664659"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-08-28T23:25:30.480443" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>${LARGURA_JANELA}</arg>
+<arg>${ALTURA_JANELA}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-08-28T23:25:30.450908" elapsed="0.030917"/>
+</kw>
+<status status="PASS" start="2025-08-28T23:25:27.660758" elapsed="2.821967"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-08-28T23:25:30.486743" level="INFO">Clicks the element 'id=novo-gasto'.</msg>
+<arg>id=novo-gasto</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-08-28T23:25:30.484249" elapsed="0.346677"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-08-28T23:25:30.833781" level="INFO">Types the text 'Pizza do Jotop' in the given field.</msg>
+<arg>id=name</arg>
+<arg>Pizza do Jotop</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-08-28T23:25:30.832053" elapsed="0.552134"/>
+</kw>
+<kw name="Teste" owner="test">
+<msg time="2025-08-28T23:25:31.386187" level="FAIL">TypeError: can only concatenate str (not "int") to str</msg>
+<var>${TESTE}</var>
+<arg>10</arg>
+<status status="FAIL" start="2025-08-28T23:25:31.385215" elapsed="0.003328">TypeError: can only concatenate str (not "int") to str</status>
+</kw>
+<kw name="Type Text" owner="Browser">
+<arg>id=value</arg>
+<arg>${TESTE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-08-28T23:25:31.390425" elapsed="0.001259"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>id=necessary</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-08-28T23:25:31.393118" elapsed="0.001111"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>text=Sim</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-08-28T23:25:31.395318" elapsed="0.000682"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<arg>id=notes</arg>
+<arg>Hamburgão</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-08-28T23:25:31.397139" elapsed="0.000862"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>id=register-button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-08-28T23:25:31.399412" elapsed="0.000929"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>text=Novo gasto salvo com sucesso!</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2025-08-28T23:25:31.401733" elapsed="0.000622"/>
+</kw>
+<kw name="Finalizar teste" owner="Functional" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-08-28T23:25:31.586642" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<arg>fullPage=true</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-08-28T23:25:31.406416" elapsed="0.181578"/>
+</kw>
+<status status="PASS" start="2025-08-28T23:25:31.404236" elapsed="0.184787"/>
+</kw>
+<msg time="2025-08-28T23:25:31.641869" level="INFO">Switching context to context=f78e4daf-bfd6-4e55-b53a-2a26b0661f50 in CURRENT</msg>
+<msg time="2025-08-28T23:25:31.662033" level="INFO">Successfully changed active context: context=f78e4daf-bfd6-4e55-b53a-2a26b0661f50</msg>
+<msg time="2025-08-28T23:25:31.720849" level="INFO">Successfully closed Context</msg>
+<status status="FAIL" start="2025-08-28T23:25:27.657486" elapsed="3.932202">TypeError: can only concatenate str (not "int") to str</status>
+</test>
+<doc>Suíte de testes para gasto</doc>
+<status status="FAIL" start="2025-08-28T23:25:27.303640" elapsed="4.421002"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Gasto" id="s1" pass="0" fail="1" skip="0">Gasto</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

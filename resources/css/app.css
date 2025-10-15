@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.layout {
+    height: 100vh;
+
+    .layout-main {
+        @apply container mx-auto flex justify-between py-8 px-0;
+        transition: margin-left 0.3s ease;
+    }
+
+    .layout-footer {
+        @apply bg-gray-200 p-4;
+    }
+}
