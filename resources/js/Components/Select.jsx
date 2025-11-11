@@ -10,7 +10,7 @@ export default function Select({
     error = "",
     isMulti = false,
     isClearable = true,
-    isDisabled = true,
+    isDisabled = false,
 }) {
     return (
         <div className="mb-4">

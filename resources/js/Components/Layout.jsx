@@ -13,7 +13,7 @@ export default function Layout({ children }) {
         Swal.fire({
             icon: 'warning',
             title: 'Nos ligue em um de nossos meios de comunicação:',
-            html: "<h2 class='text-2xl'><b>(00) 0000-1234 (Conselho Tutelar) <br> ou <br> (00) 1234-0000 (Prefeitura Municipal)</b></h2>"
+            html: "<h2 className='text-2xl'><b>(00) 0000-1234 (Conselho Tutelar) <br> ou <br> (00) 1234-0000 (Prefeitura Municipal)</b></h2>"
         })
     }
 
